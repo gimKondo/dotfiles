@@ -163,6 +163,9 @@ function cd() {
   builtin cd $@ && ls --color -F;
 }
 
+# vi means vim without setttings and plugin
+alias vi="vim -u NONE --noplugin"
+
 # cdコマンド実行後、lsを実行する
 function mkcd() { mkdir -p -- "$1" && cd -- "$1" }
 # 行番号付き
