@@ -1,0 +1,12 @@
+/*
+/*.
+
+
+!/.gitignore
+!/.gitconfig
+!/.zshrc
+!/.zprofile
+!/.vim
+
+/.vim/bundle/
+
