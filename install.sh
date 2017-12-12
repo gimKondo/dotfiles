@@ -10,7 +10,11 @@ for f in .??*; do
   [ "$f" = "README.md" ] && continue
   [ "$f" = "LICENSE" ] && continue
 
-  ln -snfv ~/dotfiles/"$f" ~/
+  if [ $# -ne 1 ]; then
+    ln -snfv ~/dotfiles/"$f" ~/
+  else
+    ln -snfv $1/dotfiles/"$f" $1/
+  fi
 done
 
 cat << END
