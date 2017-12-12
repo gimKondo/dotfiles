@@ -221,6 +221,7 @@ alias dcbash='docker-compose run app bash'
 
 # with Elixir
 alias dcmix='docker-compose run app mix'
+alias dcmxt='docker-compose run -e MIX_ENV=test app mix'
 alias dcmxrt='docker-compose run app mix phoenix.routes'
 alias dcmxtest='docker-compose run app mix test'
 alias dcmxcredo='docker-compose run app mix credo'
