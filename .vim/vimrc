@@ -166,13 +166,16 @@ if dein#load_state(s:plugin_dir)
   " コメントアウト／イン
   call dein#add('scrooloose/nerdcommenter')
 
+  " テストコード、プロダクトコードの相互オープン
+  call dein#add('gimKondo/test-prod-opener.vim')
+
   " 大文字／小文字関連の検索、スネークケース／キャメルケースの変換など
   call dein#add('tpope/vim-abolish')
 
   " スクロールをアニメーション化
   call dein#add("yonchu/accelerated-smooth-scroll")
 
-  " 重いので一時的に除外
+  " 日本語ヘルプ
   call dein#add('vim-jp/vimdoc-ja')
 
   call dein#add('thinca/vim-ref')
