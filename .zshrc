@@ -165,6 +165,8 @@ function cd() {
 
 # vi means vim without setttings and plugin
 alias vi="vim -u NONE --noplugin"
+# vim received xargs
+alias xargsvim='xargs sh -c '\''vim $* < /dev/tty'\'''
 
 # cdコマンド実行後、lsを実行する
 function mkcd() { mkdir -p -- "$1" && cd -- "$1" }
