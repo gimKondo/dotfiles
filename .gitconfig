@@ -1,6 +1,3 @@
-[user]
-    ; name = [your name]
-    ; email = [your mail address]
 [merge]
     ff = false
 [pull]
@@ -35,3 +32,8 @@
     df-isc = diff --ignore-space-change
     df-files = diff-tree --no-commit-id --name-only -r
     ranking = "!f() { git shortlog -sn --no-merges --after='date +%Y/%m/01' --before='date +%Y/%m/%d' | cat -n; }; f"
+[include]
+    ; local setting
+    ; - ex1: set user's name and email
+    ; - ex2: override aliases or other settings
+    path = ~/.local.gitconfig

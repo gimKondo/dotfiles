@@ -22,3 +22,8 @@ chown -R /home/vagrant/dotfiles
 chmod +x /home/vagrant/dotfiles/install.sh
 /home/vagrant/dotfiles/install.sh /home/vagrant
 ```
+
+## Extra
+### local gitconfig
+You can add and override setting on .gitconfig.
+If you hope, add .local.gitconfig at home directory.
