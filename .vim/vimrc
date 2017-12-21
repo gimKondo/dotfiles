@@ -673,6 +673,8 @@ nnoremap <C-p>t :<C-u>CtrlPTag<CR>
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_open_multiple_files = 't'
 
+" show dotfiles
+let g:ctrlp_show_hidden = 1
 " }}}
 
 "neocomplete {{{
