@@ -222,16 +222,22 @@ alias dcrun='docker-compose run'
 alias dcbash='docker-compose run app bash'
 
 # with Elixir
+## for default env
 alias dcmix='docker-compose run app mix'
 alias dcmixe='docker-compose run app mix run -e'
 alias dcmixi='docker-compose run app iex -S mix'
-alias dcmxt='docker-compose run -e MIX_ENV=test app mix'
 alias dcmxrt='docker-compose run app mix phoenix.routes'
+alias dcmxdbinit='docker-compose run app mix ecto.setup'
+alias dcmxdbreset='docker-compose run app mix ecto.reset'
+## for test env
 alias dcmxtest='docker-compose run app mix test'
 alias dcmxcredo='docker-compose run app mix credo'
 alias dcmxcheck='docker-compose run -e MIX_ENV=test app mix do test, credo'
-alias dcmxdbinit='docker-compose run app mix ecto.setup'
-alias dcmxdbreset='docker-compose run app mix ecto.reset'
+alias dcmxt='docker-compose run -e MIX_ENV=test app mix'
+alias dcmxte='docker-compose run -e MIX_ENV=test app mix run -e'
+alias dcmxti='docker-compose run -e MIX_ENV=test app iex -S mix'
+alias dcmxtdbinit='docker-compose run -e MIX_ENV=test app mix ecto.setup'
+alias dcmxtdbreset='docker-compose run -e MIX_ENV=test app mix ecto.reset'
 
 # ------------------------------
 # local環境
