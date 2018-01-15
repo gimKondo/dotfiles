@@ -282,8 +282,10 @@ xnoremap <C-p> p
 
 " tag jump
 nnoremap <C-]> g<C-]>
-nnoremap <F3> :<C-u>tab sts <C-R>=expand('<cword>')<CR><CR>
-nnoremap <F4> :<C-u>vert sts <C-R>=expand('<cword>')<CR><CR>
+nnoremap <C-[> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+" ファンクションキーだとTeraTerm経由で上手く動かない
+" nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+" nnoremap <F4> :<C-u>vert stj <C-R>=expand('<cword>')<CR><CR>
 
 " substitute text that selected on visual-mode without overriding register
 function! Put_text_without_override_register()
