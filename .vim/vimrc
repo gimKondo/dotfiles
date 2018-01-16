@@ -282,7 +282,7 @@ xnoremap <C-p> p
 
 " tag jump
 nnoremap <C-]> g<C-]>
-nnoremap <C-[> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+nnoremap <C-\> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 " ファンクションキーだとTeraTerm経由で上手く動かない
 " nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 " nnoremap <F4> :<C-u>vert stj <C-R>=expand('<cword>')<CR><CR>
