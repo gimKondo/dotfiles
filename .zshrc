@@ -192,6 +192,16 @@ function ssh-update() {
   ssh-add
 }
 
+# コマンドタイポ
+function command_not_found_handler(){
+  if [ -e ~/dotfiles/resource/nyusankin.txt ];then
+    cat ~/dotfiles/resource/nyusankin.txt
+  fi
+  echo "何？${1}なんてないわ"
+  echo "${USER}ったら本当にお馬鹿さんね"
+  echo "怒っちゃダメよ 血圧上がっちゃうから 乳酸菌摂ってるぅ？"
+}
+
 # ------------------------------
 # for rbenv
 # ------------------------------
