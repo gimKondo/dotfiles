@@ -231,13 +231,23 @@ alias dcmxdbinit='docker-compose run app mix ecto.setup'
 alias dcmxdbreset='docker-compose run app mix ecto.reset'
 ## for test env
 alias dcmxtest='docker-compose run app mix test'
-alias dcmxcredo='docker-compose run app mix credo || grep -n -e "@tag\s:target" test/**/*.exs'
-alias dcmxcheck='docker-compose run -e MIX_ENV=test app mix do test, credo || grep -n -e "@tag\s:target" test/**/*.exs'
+alias dcmxcredo='docker-compose run app mix credo || grep_target_tag_for_exunit'
+alias dcmxcheck='docker-compose run -e MIX_ENV=test app mix do test, credo || grep_target_tag_for_exunit'
 alias dcmxt='docker-compose run -e MIX_ENV=test app mix'
 alias dcmxte='docker-compose run -e MIX_ENV=test app mix run -e'
 alias dcmxti='docker-compose run -e MIX_ENV=test app iex -S mix'
 alias dcmxtdbinit='docker-compose run -e MIX_ENV=test app mix ecto.setup'
 alias dcmxtdbreset='docker-compose run -e MIX_ENV=test app mix ecto.reset'
+# 一時的にテスト対象を絞るために使っている"@tag :target"を検出
+function grep_target_tag_for_exunit() {
+  echo 'Checking "@tag :target"...\n'
+  grep -n -E "@tag\s+:target" test/**/*.exs
+  if [ $? -eq 0 ]; then
+    echo -e '\e[31m\nWARNING: Please erase temporal tags. \e[m'
+  else
+    echo '\e[32mOK: There are no temporal tags.\e[m'
+  fi
+}
 
 # ------------------------------
 # local環境
