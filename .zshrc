@@ -248,6 +248,11 @@ function grep_target_tag_for_exunit() {
     echo '\e[32mOK: There are no temporal tags.\e[m'
   fi
 }
+# ssh and open bash on pod that identified by prefix passed as argument
+function kubectl_ssh_bash_prefixed_pod() {
+  pod=$(kubectl get pod | grep $1 | sed -r "s/(${1}\S+)\s+.*/\1/")
+  kubectl exec -it $pod /bin/bash
+}
 
 # ------------------------------
 # local環境
