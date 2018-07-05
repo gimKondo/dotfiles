@@ -250,7 +250,7 @@ function grep_target_tag_for_exunit() {
 }
 # ssh and open bash on pod that identified by prefix passed as argument
 function kubectl_ssh_bash_prefixed_pod() {
-  pod=$(kubectl get pod | grep $1 -m 1 | sed -r "s/(${1}\S+)\s+.*/\1/")
+  pod=$(kubectl get pod | grep $1 | sed -n "$2","$2"p | sed -r "s/(${1}\S+)\s+.*/\1/")
   kubectl exec -it $pod /bin/bash
 }
 
