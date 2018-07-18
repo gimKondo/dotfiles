@@ -25,3 +25,9 @@ chown -R /home/vagrant/dotfiles
 ### local gitconfig
 You can add and override setting on .gitconfig.
 If you hope, add .local.gitconfig at home directory.
+
+Typically, user name mail address are written on .local.gitconfig.
+
+### local zshrc
+You can add and override setting on .zshrc.
+If you hope, add .zshrc_local at home directory.
