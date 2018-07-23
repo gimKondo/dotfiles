@@ -7,7 +7,6 @@ If you execute install shell, symbolic links of dotfiles are expanded to home di
 ### Standard
 ```
 git clone https://github.com/gimKondo/dotfiles ~/dotfiles
-chmod +x ~/dotfiles/install.sh
 ~/dotfiles/install.sh
 ```
 
@@ -19,7 +18,6 @@ ex) deploying to vagrant user by root user operation
 ```
 git clone https://github.com/gimKondo/dotfiles /home/vagrant/dotfiles
 chown -R /home/vagrant/dotfiles
-chmod +x /home/vagrant/dotfiles/install.sh
 /home/vagrant/dotfiles/install.sh /home/vagrant
 ```
 
@@ -27,3 +25,9 @@ chmod +x /home/vagrant/dotfiles/install.sh
 ### local gitconfig
 You can add and override setting on .gitconfig.
 If you hope, add .local.gitconfig at home directory.
+
+Typically, user name mail address are written on .local.gitconfig.
+
+### local zshrc
+You can add and override setting on .zshrc.
+If you hope, add .zshrc_local at home directory.
