@@ -260,3 +260,4 @@ function kubectl_ssh_bash_prefixed_pod() {
 if [ -e "${HOME}/.zshrc_local" ]; then
   source "${HOME}/.zshrc_local"
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
