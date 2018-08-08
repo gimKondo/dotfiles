@@ -11,6 +11,7 @@
     reflog = diff-highlight | less -FX
     show = diff-highlight | less -FX
     diff = diff-highlight | less -FX
+    tag = diff-highlight | less -FX
 [alias]
     alias = config --get-regexp 'alias.*'
     st = status
