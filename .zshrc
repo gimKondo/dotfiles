@@ -238,6 +238,8 @@ alias dcmxte='docker-compose run -e MIX_ENV=test app mix run -e'
 alias dcmxti='docker-compose run -e MIX_ENV=test app iex -S mix'
 alias dcmxtdbinit='docker-compose run -e MIX_ENV=test app mix ecto.setup'
 alias dcmxtdbreset='docker-compose run -e MIX_ENV=test app mix ecto.reset'
+## for release by distillery
+alias dcmxrelease='docker-compose run -e MIX_ENV=prod app mix release'
 # 一時的にテスト対象を絞るために使っている"@tag :target"を検出
 function grep_target_tag_for_exunit() {
   echo 'Checking "@tag :target"...\n'
