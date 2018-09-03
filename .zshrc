@@ -200,6 +200,13 @@ if [[ -s ~/.rbenv/bin ]];
 fi
 
 # ------------------------------
+# for goenv
+# ------------------------------
+if [[ -s ~/.goenv ]];
+  then export GOENV_ROOT=$HOME/.goenv && export PATH=$GOENV_ROOT/bin:$PATH && eval "$(goenv init -)"
+fi
+
+# ------------------------------
 # nvm環境
 # ------------------------------
 if [[ -s ~/.nvm/nvm.sh ]];
