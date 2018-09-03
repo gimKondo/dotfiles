@@ -84,6 +84,9 @@ if dein#load_state(s:plugin_dir)
   " Elixir
   call dein#add('elixir-editors/vim-elixir')
 
+  " Go
+  call dein#add('fatih/vim-go')
+
   " syntax check
   call dein#add('scrooloose/syntastic')
   call dein#add('ngmy/vim-rubocop')
