@@ -200,8 +200,10 @@ if [[ -s ~/.rbenv/bin ]];
 fi
 
 # ------------------------------
-# for goenv
+# for Go and goenv
 # ------------------------------
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 if [[ -s ~/.goenv ]];
   then export GOENV_ROOT=$HOME/.goenv && export PATH=$GOENV_ROOT/bin:$PATH && eval "$(goenv init -)"
 fi
