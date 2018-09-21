@@ -1,3 +1,5 @@
+[core]
+    pager = less -FX
 [merge]
     ff = false
 [pull]
