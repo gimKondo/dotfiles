@@ -917,6 +917,9 @@ let g:syntastic_go_checkers = ['golint', 'govet']
 "  single plugin
 " ////////////////////////////////////////////////////////////////////////////
 
+" golang: update package importing
+autocmd BufWritePre *.go :GoImports
+
 " CD.vim
 " http://nanasi.jp/articles/vim/cd_vim.html
 au BufEnter * execute ":lcd " . expand("%:p:h")
