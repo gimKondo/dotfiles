@@ -913,16 +913,23 @@ let g:jsx_ext_required = 0
 let g:syntastic_go_checkers = ['golint', 'govet']
 " }}}
 
-" ////////////////////////////////////////////////////////////////////////////
-"  single plugin
-" ////////////////////////////////////////////////////////////////////////////
-
 " golang: update package importing
 autocmd BufWritePre *.go :GoImports
+
+" Goではcmd領域に3heightを確保
+" 保存時など、golintが走るときに意図しない空メッセージが発生し、それをスキップするのに
+" 余計なキー入力を要求されるのを防止するための暫定対症療法
+augroup golang
+autocmd! FileType go setlocal cmdheight=3
+augroup END
 
 " CD.vim
 " http://nanasi.jp/articles/vim/cd_vim.html
 au BufEnter * execute ":lcd " . expand("%:p:h")
+
+" ////////////////////////////////////////////////////////////////////////////
+"  single plugin
+" ////////////////////////////////////////////////////////////////////////////
 
 " JSON整形(jqコマンド依存)
 command! -nargs=? Jq call s:Jq(<f-args>)
