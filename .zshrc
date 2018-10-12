@@ -50,6 +50,11 @@ bindkey "^R" history-incremental-search-backward
 # すべてのヒストリを表示する
 function history-all { history -E 1 }
 
+# 重複するパスを追記しない
+# $PATHの設定例: path=(~/bin /usr/local/bin ~/foo/bin(N-/) ${path})
+# - `(N-/)` を付けると存在しないディレクトリは登録しない
+typeset -U path
+
 # ------------------------------
 # Look And Feel Settings
 # ------------------------------
