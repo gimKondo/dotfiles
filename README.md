@@ -31,3 +31,6 @@ Typically, user name mail address are written on .local.gitconfig.
 ### local zshrc
 You can add and override setting on .zshrc.
 If you hope, add .zshrc_local at home directory.
+
+## Limitation
+- .tmux.conf expect tmux2.1 or later
