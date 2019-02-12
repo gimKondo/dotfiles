@@ -923,6 +923,12 @@ augroup golang
 autocmd! FileType go setlocal cmdheight=3
 augroup END
 
+" vim-go {{{
+" https://budougumi0617.github.io/2018/10/22/deug-gocode-and-vim-go-auto-completion/
+let g:go_gocode_propose_source = 0
+" }}}
+
+
 " CD.vim
 " http://nanasi.jp/articles/vim/cd_vim.html
 au BufEnter * execute ":lcd " . expand("%:p:h")
