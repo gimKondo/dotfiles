@@ -16,4 +16,5 @@
 # refactor: A code change that neither fixes a bug nor adds a feature
 # perf: A code change that improves performance
 # test: Adding or correcting tests
-# chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+# env: Enviroment(e.g. development, CI) configureation change
+# chore: Another trivial changes
