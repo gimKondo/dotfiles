@@ -198,6 +198,13 @@ function ssh-update() {
 }
 
 # ------------------------------
+# anyenv環境
+# ------------------------------
+if [[ -s ~/.anyenv ]];
+  then export PATH="$HOME/.anyenv/bin:$PATH" && eval "$(anyenv init -)"
+fi
+
+# ------------------------------
 # for rbenv
 # ------------------------------
 if [[ -s ~/.rbenv/bin ]];
