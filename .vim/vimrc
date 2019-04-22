@@ -229,6 +229,10 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
+" change indent continuously
+xnoremap < <gv
+xnoremap > >gv
+
 " show buffer list
 nmap <Space>b :ls<CR>:buffer
 
