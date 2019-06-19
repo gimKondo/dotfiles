@@ -4,6 +4,15 @@ set main-view = id date author:email-user commit-title:graph=yes,refs=yes
 # show line number on blame view
 set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
 
+# move to page top
+# * remap view-grep to E
+bind generic g      move-first-line
+bind generic E      view-grep
+
+# move to page bottom
+bind generic G      move-last-line
+bind main    G      move-last-line
+
 # reset --hard to commit
 bind main    H      ?git reset --hard %(commit)
 bind diff    H      ?git reset --hard %(commit)
