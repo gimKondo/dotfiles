@@ -1,3 +1,6 @@
+# show commit ID on main view
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
 # show line number on blame view
 set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
 
