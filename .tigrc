@@ -8,6 +8,8 @@ set blame-view  = date:default author:email-user id:yes,color line-number:yes,in
 # * remap view-grep to E
 bind generic g      move-first-line
 bind generic E      view-grep
+# remap `:toggle commit-title-graph` to Alt-g
+bind main    <Esc>g :toggle commit-title-graph
 
 # move to page bottom
 bind generic G      move-last-line
