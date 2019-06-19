@@ -1,3 +1,6 @@
+# show line number on blame view
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
 # reset --hard to commit
 bind main    H      ?git reset --hard %(commit)
 bind diff    H      ?git reset --hard %(commit)
