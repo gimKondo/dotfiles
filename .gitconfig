@@ -18,6 +18,8 @@
     tag = diff-highlight | less -FX
 [alias]
     alias = config --get-regexp 'alias.*'
+    me = config --get-regexp 'user.*'
+    lme = config --local --get-regexp 'user.*'
     st = status
     sta = status -uall
     co = checkout
