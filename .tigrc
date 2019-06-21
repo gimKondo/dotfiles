@@ -11,6 +11,9 @@ bind generic E      view-grep
 # remap `:toggle commit-title-graph` to Alt-g
 bind main    <Esc>g :toggle commit-title-graph
 
+# checkout commit
+bind main    c      ?git checkout %(commit)
+
 # move to page bottom
 bind generic G      move-last-line
 bind main    G      move-last-line
