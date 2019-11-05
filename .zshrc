@@ -124,7 +124,7 @@ precmd() {
 ### Aliases ###
 alias history='history -E' #時刻を表示させる
 
-alias ls='ls --color -F'
+alias ls='ls -F'
 alias ll='ls -l'
 alias la='ls -A'
 alias lla='ls -lA'
@@ -165,7 +165,7 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 
 # cdコマンド実行後、lsを実行する
 function cd() {
-  builtin cd $@ && ls --color -F;
+  builtin cd $@ && ls -F;
 }
 
 # vi means vim without setttings and plugin
@@ -196,13 +196,6 @@ function ssh-update() {
   eval `cat ~/ssh-agent.out`
   ssh-add
 }
-
-# ------------------------------
-# anyenv環境
-# ------------------------------
-if [[ -s ~/.anyenv ]];
-  then export PATH="$HOME/.anyenv/bin:$PATH" && eval "$(anyenv init -)"
-fi
 
 # ------------------------------
 # for rbenv
@@ -284,3 +277,17 @@ if [ -e "${HOME}/.zshrc_local" ]; then
   source "${HOME}/.zshrc_local"
 fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### Added by Zplugin's installer
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
+
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+
+zplugin light zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
