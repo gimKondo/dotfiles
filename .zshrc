@@ -124,7 +124,7 @@ precmd() {
 ### Aliases ###
 alias history='history -E' #時刻を表示させる
 
-alias ls='ls --color -F'
+alias ls='ls -F'
 alias ll='ls -l'
 alias la='ls -A'
 alias lla='ls -lA'
@@ -165,7 +165,7 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 
 # cdコマンド実行後、lsを実行する
 function cd() {
-  builtin cd $@ && ls --color -F;
+  builtin cd $@ && ls -F;
 }
 
 # vi means vim without setttings and plugin
