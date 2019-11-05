@@ -284,3 +284,5 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin installer's chunk
 
+zplugin light zsh-users/zsh-autosuggestions
+
