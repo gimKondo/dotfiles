@@ -14,6 +14,10 @@ bind main    <Esc>g :toggle commit-title-graph
 # checkout commit
 bind main    c      ?git checkout %(commit)
 
+# checkout commit and make branch
+bind branch B ?git checkout -b "%(prompt Enter new branch name:)" %(branch)
+bind main   B ?git checkout -b "%(prompt Enter new branch name: )"
+
 # move to page bottom
 bind generic G      move-last-line
 bind main    G      move-last-line
