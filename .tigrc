@@ -28,3 +28,8 @@ bind diff    H      ?git reset --hard %(commit)
 bind refs    H      ?git reset --hard %(branch)
 # reset --hard to HEAD
 bind status  H      ?git reset --hard HEAD
+
+# rebase interactive to commit
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)
+
