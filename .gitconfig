@@ -41,6 +41,7 @@
     ranking = "!f() { git shortlog -sn --no-merges --after='date +%Y/%m/01' --before='date +%Y/%m/%d' | cat -n; }; f"
     mile-to-master = "!f() { git fetch; git rev-list --no-merges --count ..origin/master; }; f"
     mile-to-dev = "!f() { git fetch; git rev-list --no-merges --count ..origin/develop; }; f"
+    pushf = push --force-with-lease
 [include]
     ; local setting
     ; - ex1: set user's name and email
