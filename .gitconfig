@@ -42,6 +42,7 @@
     mile-to-master = "!f() { git fetch; git rev-list --no-merges --count ..origin/master; }; f"
     mile-to-dev = "!f() { git fetch; git rev-list --no-merges --count ..origin/develop; }; f"
     pushf = push --force-with-lease
+    clear-feature = "!f() { git branch | grep feature | xargs git branch -d; }; f"
 [include]
     ; local setting
     ; - ex1: set user's name and email
