@@ -23,7 +23,8 @@
     st = status
     sta = status -uall
     co = checkout
-    work = checkout -b
+    sw = switch
+    work = switch -c
     unstage = reset HEAD
     cm = commit
     logtips = log --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -16
