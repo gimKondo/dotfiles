@@ -785,7 +785,7 @@ autocmd ColorScheme * hi Comment ctermbg=Black ctermfg=Green guifg=LawnGreen gui
 autocmd ColorScheme * hi TabLine ctermbg=Grey ctermfg=Black guifg=Black guibg=LawnGreen
 autocmd ColorScheme * hi TabLineFill ctermbg=Black ctermfg=Grey guifg=Black guibg=LawnGreen
 autocmd ColorScheme * hi TabLineSel ctermbg=Black ctermfg=LightGreen guifg=Black guibg=LawnGreen
-colorscheme evening
+colorscheme gim_evening
 
 " indent guide {{{
 " スクロールが重くなるのでデフォルトオフ
