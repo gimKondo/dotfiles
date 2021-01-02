@@ -223,6 +223,9 @@ filetype indent on
 " swapファイルは不要
 set noswapfile
 
+" No beeping
+set belloff=all
+
 " move cursor up/down depending on displayed line
 nnoremap j gj
 nnoremap k gk
