@@ -178,6 +178,8 @@ function mkcd() { mkdir -p -- "$1" && cd -- "$1" }
 # 行番号付き
 function headln(){ head $@ | awk '{print sprintf("%02d", NR) " " $0;}' }
 function catln(){ cat $@ | awk '{print sprintf("%03d", NR) " " $0;}' }
+# ランダム文字列生成
+function randkeys(){ cat /dev/random | base64 | fold -w $1 | head -n $2 }
 
 # 辞書を引く(英和)
 function ejdict() {
