@@ -49,3 +49,5 @@
     ; - ex1: set user's name and email
     ; - ex2: override aliases or other settings
     path = ~/.local.gitconfig
+[ghq]
+	root = ~/go/src
