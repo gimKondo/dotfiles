@@ -40,6 +40,7 @@
     df-isc = diff --ignore-space-change
     df-files = diff-tree --no-commit-id --name-only -r
     ranking = "!f() { git shortlog -sn --no-merges --after='date +%Y/%m/01' --before='date +%Y/%m/%d' | cat -n; }; f"
+    mile-to-main = "!f() { git fetch; git rev-list --no-merges --count ..origin/main; }; f"
     mile-to-master = "!f() { git fetch; git rev-list --no-merges --count ..origin/master; }; f"
     mile-to-dev = "!f() { git fetch; git rev-list --no-merges --count ..origin/develop; }; f"
     pushf = push --force-with-lease
