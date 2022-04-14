@@ -145,6 +145,9 @@ alias -g RET='RAILS_ENV=test'
 
 alias -g mm='middleman'
 
+# real clear screen
+alias cls='printf "\033c"'
+
 # tree
 alias tree='tree --charset=C -NC'
 
