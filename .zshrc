@@ -202,6 +202,10 @@ function ssh-update() {
   ssh-add
 }
 
+# fvm
+alias vflutter="fvm flutter"
+alias vdart="fvm dart"
+
 # ------------------------------
 # for rbenv
 # ------------------------------
