@@ -1,6 +1,15 @@
 # show commit ID on main view
 set main-view = id date author:email-user commit-title:graph=yes,refs=yes
 
+set editor-line-number = yes
+
+# show line number on pager view
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
 # show line number on blame view
 set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
 
