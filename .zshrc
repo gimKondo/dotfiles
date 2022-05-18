@@ -214,6 +214,14 @@ if [[ -s ~/.rbenv/bin ]];
 fi
 
 # ------------------------------
+# for npm global command
+# ------------------------------
+if [[ -x npm ]]; then
+    export PATH=$PATH:`npm bin -g`
+fi
+
+
+# ------------------------------
 # for Go and goenv
 # ------------------------------
 export GOPATH=$HOME/go
