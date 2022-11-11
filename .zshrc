@@ -171,6 +171,9 @@ function cd() {
   builtin cd $@ && ls -F;
 }
 
+# cd to git root
+alias cd-git-root='cd $(git rev-parse --show-cdup)'
+
 # vi means vim without setttings and plugin
 alias vi="vim -u NONE --noplugin"
 # vim received xargs
