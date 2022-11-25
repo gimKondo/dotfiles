@@ -24,6 +24,7 @@
     sta = status -uall
     co = checkout
     sw = switch
+    base = "!f() { git sw main && git pull; };f"
     work = switch -c
     unstage = reset HEAD
     cm = commit
