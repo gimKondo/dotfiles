@@ -37,6 +37,9 @@ setopt extended_history   # ヒストリに実行時間も保存する
 setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
 setopt share_history      # 他のシェルのヒストリをリアルタイムで共有する
 setopt hist_reduce_blanks # 余分なスペースを削除してヒストリに保存する
+setopt hist_save_no_dups      # 履歴ファイルに書き出す際、新しいコマンドと重複する古いコマンドは切り捨てる
+setopt hist_expire_dups_first # 履歴を切り詰める際に、重複する最も古いイベントから消す
+setopt hist_ignore_all_dups   # 履歴が重複した場合に古い履歴を削除する
 
 # マッチしたコマンドのヒストリを表示できるようにする
 autoload history-search-end
@@ -49,6 +52,15 @@ bindkey "^R" history-incremental-search-backward
 
 # すべてのヒストリを表示する
 function history-all { history -E 1 }
+
+
+# インクリメンタル履歴サーチ
+function select-history() {
+  BUFFER=$(history -n -r 1 | fzf --exact --reverse --query="$LBUFFER" --prompt="History > ")
+  CURSOR=${#BUFFER}
+}
+zle -N select-history
+bindkey '^r' select-history
 
 # 重複するパスを追記しない
 # $PATHの設定例: path=(~/bin /usr/local/bin ~/foo/bin(N-/) ${path})
@@ -122,8 +134,6 @@ precmd() {
 # ------------------------------
 
 ### Aliases ###
-alias history='history -E' #時刻を表示させる
-
 alias ls='ls -F'
 alias ll='ls -l'
 alias la='ls -A'
