@@ -47,6 +47,8 @@
     mile-to-dev = "!f() { git fetch; git rev-list --no-merges --count ..origin/develop; }; f"
     pushf = push --force-with-lease
     clear-feature = "!f() { git branch | grep feature | xargs git branch -d; }; f"
+    show-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\"; }; f"
+    clear-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\" | xargs git branch -d; }; f"
     tag-grep-newer = "!f() { git tag -l \"*$1*\" --sort=-creatordate; }; f"
 [include]
     ; local setting
