@@ -208,6 +208,13 @@ function jedict() {
 # 辞書のデフォルトは英和
 alias dict='ejdict'
 
+# split with extention(for mac)
+# > split-with-ext line_count input output ext
+function split-with-ext() {
+    split -l $1 $2 $3
+    for f in ${3}??; do mv $f $f.$4; done
+}
+
 # ssh-agent更新
 function ssh-update() {
   ssh-agent > ~/ssh-agent.out
@@ -324,4 +331,3 @@ bindkey '^[[B' history-substring-search-down
 # Load the pure theme, with zsh-async library that's bundled with it.
 zplugin ice pick"async.zsh" src"pure.zsh"
 zplugin light sindresorhus/pure
-
