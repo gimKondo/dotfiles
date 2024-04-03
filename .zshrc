@@ -162,7 +162,7 @@ alias cls='printf "\033c"'
 alias tree='tree --charset=C -NC'
 
 # PATHを1行1パスで表示
-alias showpath="echo $PATH | sed 's/:/\n/g'"
+alias showpath='echo $PATH | sed "s/:/\n/g"'
 
 # Bundle関連
 alias be='bundle exec'
