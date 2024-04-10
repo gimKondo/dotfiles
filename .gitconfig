@@ -50,7 +50,7 @@
     clear-feature = "!f() { git branch | grep feature | xargs git branch -d; }; f"
     show-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\"; }; f"
     clear-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\" | xargs git branch -d; }; f"
-    tag-grep-newer = "!f() { git tag -l \"*$1*\" --sort=-creatordate; }; f"
+    tag-grep-newer = "!f() { git tag -l \"$1*\" | sort -Vr; }; f"
 [include]
     ; local setting
     ; - ex1: set user's name and email
