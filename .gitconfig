@@ -51,6 +51,8 @@
     show-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\"; }; f"
     clear-merged = "!f() { git branch --merged | egrep -v \"\\*|main|master|dev|develop\" | xargs git branch -d; }; f"
     tag-grep-newer = "!f() { git tag -l \"$1*\" | sort -Vr; }; f"
+    tag-grep-current = "!f() { git tag -l \"$1*\" | sort -Vr | head -n 3; }; f"
+
 [include]
     ; local setting
     ; - ex1: set user's name and email
