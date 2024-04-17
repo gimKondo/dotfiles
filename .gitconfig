@@ -30,9 +30,9 @@
     feature = "!f() { git switch -c $1 && git push -u origin $1; };f"
     unstage = reset HEAD
     cm = commit
-    logtips = log --tags --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -16
-    lgt = log --tags --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
-    lgtopo = log --tags --date=local --topo-order --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
+    logtips = log --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -16
+    lgt = log --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
+    lgtopo = log --decorate --date=local --topo-order --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
     slog = log --no-merges --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
     rb = rebase
     rbi = rebase -i
