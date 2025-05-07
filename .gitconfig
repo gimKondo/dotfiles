@@ -58,8 +58,6 @@
     ; - ex1: set user's name and email
     ; - ex2: override aliases or other settings
     path = ~/.local.gitconfig
-[ghq]
-	root = ~/go/src
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
