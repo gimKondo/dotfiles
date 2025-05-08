@@ -3,7 +3,10 @@
 # eval `cat ~/ssh-agent.out`
 # ssh-add
 
-# anyenv by brew
-eval "$(anyenv init -)"
+if [ -x "`which anyenv 2>/dev/null`" ]; then
+    eval "$(anyenv init -)"
+fi
 
-eval "$(nodenv init -)"
+if [ -x "`which nodenv 2>/dev/null`" ]; then
+    eval "$(nodenv init -)"
+fi
