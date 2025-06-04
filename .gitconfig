@@ -34,6 +34,7 @@
     lgt = log --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
     lgtopo = log --decorate --date=local --topo-order --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
     slog = log --no-merges --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
+    lghere = log --first-parent --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
     rb = rebase
     rbi = rebase -i
     br = branch
