@@ -28,7 +28,7 @@
     base = "!f() { git sw main && git pull; };f"
     work = switch -c
     feature = "!f() { git switch -c $1 && git push -u origin $1; };f"
-    unstage = reset HEAD
+    unstage = restore --staged
     cm = commit
     logtips = log --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -16
     lgt = log --decorate --date=local --pretty='format:%C(yellow)%h %C(green)%cd %C(cyan)%an%C(red)%d %C(reset)%s' -10
