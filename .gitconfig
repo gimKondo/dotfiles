@@ -69,3 +69,5 @@
 	patterns = private_key
 	patterns = private_key_id
 
+[init]
+	defaultBranch = main
